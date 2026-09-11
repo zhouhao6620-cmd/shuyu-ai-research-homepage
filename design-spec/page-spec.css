@@ -1,0 +1,58 @@
+/* Only applies to the three capability specification documents. */
+.page-spec { background: #fff; }
+.page-spec .topbar { grid-template-columns: 260px minmax(0, 1fr) auto; }
+.page-spec .channel-nav { gap: clamp(14px, 1.7vw, 26px); overflow-x: auto; }
+.page-spec .toc { overflow-y: auto; }
+.page-spec .toc .page-spec-pages a.is-current { color: var(--blue); background: var(--blue-soft); font-weight: 500; }
+.page-spec .page-spec-contents-label { margin-top: 28px; }
+.page-spec .page-spec-anchors { padding-bottom: 28px; }
+.page-spec .page-spec-anchors a.active { background: transparent; color: var(--blue); }
+.page-spec .doc-section { max-width: 1200px; padding: 48px 56px; scroll-margin-top: 84px; }
+.page-spec .page-spec-hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 40px; padding-top: 64px; padding-bottom: 48px; }
+.page-spec .page-hero h1 { font-size: 32px; line-height: 44px; font-weight: 600; letter-spacing: -.02em; }
+.page-spec .hero-lead { margin-top: 16px; max-width: 600px; font-size: 14px; line-height: 25px; }
+.page-spec .page-spec-launch { padding-top: 30px; }
+.page-spec .page-spec-launch > a { display: inline-block; color: #3478f6; font-size: 24px; line-height: 34px; font-weight: 500; white-space: nowrap; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+.page-spec .page-spec-launch > a:hover { text-decoration: underline; }
+.page-spec .page-spec-launch span { display: inline-block; margin-left: 4px; font-size: 22px; }
+.page-spec .page-spec-launch p { margin: 8px 0 0; color: var(--auxiliary); font-size: 12px; line-height: 18px; }
+.page-spec .section-heading { margin-bottom: 24px; }
+.page-spec .section-heading h2 { font-size: 22px; line-height: 32px; }
+.page-spec .section-index { margin-bottom: 6px; font-size: 11px; font-weight: 500; }
+.page-spec .page-spec-rules { margin: 0; }
+.page-spec .page-spec-rules > div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 28px; padding: 14px 0; }
+.page-spec .page-spec-rules > div + div { border-top: 1px solid var(--divider); }
+.page-spec .page-spec-rules dt { color: var(--text); font-weight: 500; line-height: 25px; }
+.page-spec .page-spec-rules dd { margin: 0; color: var(--secondary); line-height: 25px; }
+.page-spec .footer { max-width: 1200px; padding-inline: 56px; gap: 24px; }
+.page-spec .footer a { color: var(--blue); }
+.page-spec a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+@media (max-width: 1280px) {
+  .page-spec .topbar { grid-template-columns: 250px minmax(0, 1fr); }
+  .page-spec .version { display: none; }
+  .page-spec .doc-section { padding-inline: 40px; }
+  .page-spec .page-spec-hero { gap: 24px; }
+  .page-spec .page-spec-launch > a { font-size: 21px; }
+}
+@media (max-width: 1060px) {
+  .page-spec .page-spec-hero { grid-template-columns: 1fr; gap: 0; }
+  .page-spec .page-spec-launch { padding-top: 24px; }
+  .page-spec .page-spec-rules > div { grid-template-columns: 100px minmax(0, 1fr); gap: 20px; }
+}
+@media (max-width: 900px) {
+  .page-spec .topbar { grid-template-columns: auto minmax(0, 1fr); }
+  .page-spec .doc-section { padding: 36px 28px; }
+  .page-spec .page-spec-hero { padding-top: 44px; }
+  .page-spec .footer { padding-inline: 28px; }
+}
+@media (max-width: 640px) {
+  .page-spec .toc { width: 156px; padding: 24px 10px; }
+  .page-spec .content { margin-left: 156px; }
+  .page-spec .toc nav a { padding-inline: 8px; font-size: 12px; }
+  .page-spec .toc-note { display: none; }
+  .page-spec .doc-section { padding-inline: 22px; }
+  .page-spec .page-hero h1 { font-size: 26px; line-height: 36px; }
+  .page-spec .page-spec-launch > a { white-space: normal; font-size: 20px; }
+  .page-spec .page-spec-rules > div { grid-template-columns: 1fr; gap: 5px; }
+  .page-spec .footer { flex-direction: column; }
+}

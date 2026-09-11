@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="数愈全局骨架规范"><title>全局骨架 · 数愈设计规范</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="topbar">
+    <a class="brand" href="./index.html"><img src="../visitor/assets/shuyu-logo.png" alt="数愈科研"><span class="brand-divider"></span><span>前端设计规范</span></a>
+    <nav class="channel-nav" aria-label="规范频道"><a href="./index.html">设计规范</a><a class="active" href="./skeleton.html">全局骨架</a><a href="./free-chat.html">自由对话</a><a href="./task-chat.html">任务对话</a><a href="./workflows.html">能力频道页</a><a href="./workflow-detail.html">能力详情页</a></nav>
+    <div class="version">V1 · 已冻结</div>
+  </header>
+  <div class="docs-shell">
+    <aside class="toc"><p class="toc-label">全局骨架</p><nav><a class="active" href="#skeleton-overview">骨架总览</a><a href="#skeleton-sizing">尺寸规则</a><a href="#skeleton-sidebar">左侧导航</a><a href="#skeleton-composer">输入区域</a><a href="#skeleton-right">右侧面板</a></nav><div class="toc-note"><span class="status-dot"></span><div><strong>PC 基线</strong><small>1440px 设计宽度</small></div></div></aside>
+    <main id="main" class="content">
+      <section id="skeleton-overview" class="page-hero doc-section"><p class="eyebrow">GLOBAL SKELETON</p><h1>固定框架，内容轨道按场景切换</h1><p class="hero-lead">左侧导航、中央头部、右侧面板和安全边距构成固定框架；中央内容根据任务类型选择 800px 或 960px 轨道。宽屏只增加外围留白，不拉伸核心内容。</p></section>
+      <section class="doc-section preview-section">
+        <header class="section-heading"><div><p class="section-index">01 / COMPLETE VIEW</p><h2>PC 完整骨架</h2><p>以 1440px 为基准展示展开状态。示意图按比例缩放，尺寸标注使用实际 CSS 像素。</p></div><button class="copy-css" data-copy="skeleton" type="button">复制 CSS 样式</button></header>
+        <div class="desktop-specimen skeleton-specimen">
+          <div class="sk-top"><span>中央顶部导航 56px</span></div>
+          <aside class="sk-left"><div class="sk-logo">数愈科研</div><strong>左侧导航</strong><b>260px</b><span>模式入口</span><span>独立历史</span><span>文件与账户</span></aside>
+          <section class="sk-center"><div class="dimension-line"><span>固定安全边距 38px</span></div><div class="sk-content"><strong>内容轨道 800px / 960px</strong><p>对话采用 800px，能力说明及管理页面采用 960px；宽屏下保持轨道居中</p><div class="sk-composer"><span>对话输入框 760 × 140px</span><i></i></div></div></section>
+          <aside class="sk-right"><strong>右侧面板</strong><b>400px</b><span>按场景出现</span><span>固定宽度，可收起</span></aside>
+        </div>
+        <p class="figure-note">左侧导航固定 260px，中央头部固定 56px，右侧面板展开时固定 400px；内容区与固定区域始终保留 38px 安全边距。宽屏增加外围空间，核心轨道保持居中。</p>
+      </section>
+      <section id="skeleton-sizing" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">02 / DIMENSIONS</p><h2>固定框架与内容宽度</h2><p>先固定工作台框架，再根据页面的信息密度选择内容轨道。所有二级页面共用同一安全边距。</p></div></header>
+        <div class="spec-metrics"><article><strong>260px</strong><span>左侧导航固定宽度</span></article><article><strong>56px</strong><span>中央顶部导航固定高度</span></article><article><strong>400px</strong><span>右侧面板展开宽度</span></article><article><strong>38px</strong><span>内容与固定区域安全边距</span></article><article><strong>800px</strong><span>自由对话、任务对话工作区</span></article><article><strong>960px</strong><span>能力、管理及缺省页面</span></article></div>
+        <div class="rule-list"><p><strong>对话工作区 · 800px</strong><span>对话、任务链、输入配置和交付内容沿同一阅读轴展示。宽屏时保持 800px，不放大文字与消息，只自适应增加两侧留白并维持视觉居中。</span></p><p><strong>功能与缺省页 · 960px</strong><span>能力频道、能力详情、科研空间、文件管理及缺省页统一使用 960px 最大宽度，用于筛选、卡片、分栏、管理操作和空状态表达。</span></p><p><strong>窄屏规则</strong><span>当可用空间不足时，两类轨道都缩小到容器宽度，并继续保留安全边距；卡片列数随断点减少。</span></p></div>
+      </section>
+      <section id="skeleton-sidebar" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">03 / LEFT NAVIGATION</p><h2>左侧导航</h2><p>自由对话与科研任务是两个独立核心入口，历史记录也按模式分开。</p></div></header>
+        <div class="sidebar-specimen"><div class="side-brand">数愈科研</div><button class="creation secondary"><span class="icon plus"></span>新建自由对话</button><button class="creation secondary"><svg class="research-icon" viewBox="0 0 24 24"><path d="M9 3h6M10 3v5.2l-4.7 8.1A3.1 3.1 0 0 0 8 21h8a3.1 3.1 0 0 0 2.7-4.7L14 8.2V3M8.2 14h7.6"/></svg>新建科研任务</button><h4>最近的对话</h4><button class="active">分析研究方向</button><button>修改统计方法</button><h4>科研任务</h4><button>临床预测模型构建</button><button>系统综述与证据提取</button><div class="side-bottom">我的文件 · 账户</div></div>
+        <div class="rule-list"><p><strong>模式入口</strong><span>两个按钮始终同时可见，不合并为模式切换器。</span></p><p><strong>历史隔离</strong><span>自由对话和科研任务使用独立标题与列表。</span></p><p><strong>滚动范围</strong><span>历史列表内部滚动，底部文件与账户入口固定。</span></p></div>
+      </section>
+      <section id="skeleton-composer" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">04 / COMPOSER</p><h2>底部输入区域</h2><p>输入框默认使用完整形态，不提供 mini 状态；与内容轨道共同形成稳定的阅读和操作中心。</p></div></header>
+        <div class="composer-specimen"><div class="composer-field"><p>描述你的科研问题，或上传研究材料…</p><div><button class="composer-tool">＋ 上传</button><span>760 × 140px · 16px 圆角</span><button class="icon-only send" aria-label="发送"><span class="send-icon"></span></button></div></div><span class="bottom-gap">距离视口底部 24px</span></div>
+      </section>
+      <section id="skeleton-right" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">05 / RIGHT PANEL</p><h2>右侧面板</h2><p>只在需要并行查看时出现。收起后面板完全隐藏，中央区域恢复完整宽度，右上角保留展开入口。</p></div></header>
+        <div class="right-panel-states"><article><div class="panel-open"><header>辅助面板 <button>收起</button></header><p>预览、能力推荐或频道助手</p><div></div></div><strong>展开 · 400px</strong></article><article><div class="panel-hidden-state"><span>中央内容扩展到完整宽度</span><button class="panel-expand" aria-label="展开右侧面板">▯</button></div><strong>收起 · 面板完全隐藏</strong></article></div>
+      </section>
+      <footer class="footer"><span>数愈前端设计规范 · 全局骨架</span><span>PC 基线</span></footer>
+    </main>
+  </div>
+  <div class="toast" role="status" aria-live="polite"></div><script src="./app.js"></script>
+</body></html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="数愈能力频道页规范说明与独立产品效果入口">
+  <title>能力频道页 · 数愈设计规范</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./page-spec.css">
+</head>
+<body class="page-spec">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="topbar">
+    <a class="brand" href="./index.html"><img src="../visitor/assets/shuyu-logo.png" alt="数愈科研"><span class="brand-divider"></span><span>前端设计规范</span></a>
+    <nav class="channel-nav" aria-label="设计规范导航"><a href="./index.html">设计规范</a><a href="./skeleton.html">全局骨架</a><a href="./free-chat.html">自由对话</a><a href="./task-chat.html">任务对话</a><a href="./workflows.html" class="active" aria-current="page">能力频道页</a><a href="./workflow-detail.html">能力详情页</a><a href="./workflow-preview.html">能力预览页</a></nav>
+    <div class="version">V1 · 设计规范</div>
+  </header>
+  <div class="docs-shell">
+    <aside class="toc" aria-label="规范目录">
+      <p class="toc-label">能力页面规范</p>
+      <nav class="page-spec-pages" aria-label="能力页面"><a href="./workflows.html" class="is-current" aria-current="page">能力频道页</a><a href="./workflow-detail.html">能力详情页</a><a href="./workflow-preview.html">能力预览页</a></nav>
+      <p class="toc-label page-spec-contents-label">本页内容</p>
+      <nav class="page-spec-anchors" aria-label="本页章节"><a class="active" href="#overview" aria-current="location">规范概览</a><a href="#description">频道描述</a><a href="#search">搜索模块</a><a href="#filter">筛选模块</a><a href="#favorite">收藏模块</a></nav>
+      <div class="toc-note"><span class="status-dot"></span><div><strong>发现与筛选</strong><small>规范说明 · 独立产品页面</small></div></div>
+    </aside>
+    <main id="main" class="content">
+      <section id="overview" class="page-hero doc-section page-spec-hero">
+        <div><p class="eyebrow">CAPABILITY CHANNEL</p><h1>能力频道页</h1><p class="hero-lead">用于发现和选择科研工作流。主体只组织频道描述、搜索、筛选与收藏四类内容，统一使用 960px 最大内容轨道。</p></div>
+        <div class="page-spec-launch"><a href="./product/workflows.html" target="_blank" rel="noopener">打开能力频道页 <span aria-hidden="true">↗</span></a><p>960px 内容轨道 · 新窗口查看</p></div>
+      </section>
+<section id="description" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">01 / DESCRIPTION</p><h2>频道描述</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>信息任务</dt><dd>用一段完整但克制的介绍说明能力面向谁、提供什么专业工作流、如何保证医学方法与证据质量。描述先建立专业可信度，再引导用户输入研究方向或分析瓶颈。</dd></div><div><dt>标题组合</dt><dd>机器人图标与主标题紧密排列并左对齐；主标题只占一行。描述位于标题下方并与正文阅读轴对齐，不使用独立大卡片包裹。</dd></div><div><dt>表达边界</dt><dd>优先使用医生和研究者能直接理解的语言，说明“能解决什么”和“依据如何复核”。验证数量、专家参与等信息只有在有真实依据时才展示。</dd></div></dl>
+      </section>
+<section id="search" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">02 / SEARCH</p><h2>搜索模块</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>统一输入</dt><dd>搜索与智能助手共用一个输入框，用户只需描述研究方向、材料或当前瓶颈。输入区是频道的主操作，不再拆成两个相互竞争的表单。</dd></div><div><dt>两种动作</dt><dd>输入框提供“闪电搜索”和“AI 推荐”两个大圆角按钮，并分别配搜索语义图标与 AI 语义图标。闪电搜索直接匹配名称、用途和标签；AI 推荐根据自然语言理解任务并推荐工作流。</dd></div><div><dt>布局关系</dt><dd>搜索输入区约占两张能力卡片的宽度，右侧展示三行自适应案例胶囊。输入区与案例区等高，输入框采用 1px 蓝色边框和轻投影；案例胶囊使用灰色背景、不加投影，文字长度可不同但不得越过安全区。</dd></div></dl>
+      </section>
+<section id="filter" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">03 / FILTER</p><h2>筛选模块</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>一级分类</dt><dd>一级分类使用横向文字导航，每项配置独立图标与结果数量；默认入口命名为“推荐”。选中项使用品牌蓝文字和 2px 下划线，未选中项保持中性灰。</dd></div><div><dt>二级筛选</dt><dd>二级筛选紧接一级分类下方并直接左对齐，不显示“二级标签”等解释性标题。筛选项使用矩形标签，选中项为蓝色边框，未选中项为浅灰背景；数量随当前一级分类更新。</dd></div><div><dt>结果状态</dt><dd>搜索、一级分类和二级筛选共同决定结果。结果直接以三列丰富能力卡片呈现，不增加“共多少个工作流”等重复说明；无结果时提供清除条件或返回推荐的入口。</dd></div></dl>
+      </section>
+<section id="favorite" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">04 / FAVORITE</p><h2>收藏模块</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>频道入口</dt><dd>收藏放在一级分类行最右侧，与分类导航保持同一基线。心形图标、文字和数量统一使用红色，入口不与“推荐”混为同一分类。</dd></div><div><dt>卡片操作</dt><dd>每张能力卡片右下角保留独立收藏按钮。点击只更新收藏状态，不触发卡片跳转；收藏数量和频道收藏结果同步变化。</dd></div><div><dt>收藏结果</dt><dd>点击频道收藏入口后只展示已收藏能力，并继续允许搜索和二级筛选。没有收藏内容时使用 960px 缺省页规则，引导用户返回推荐能力。</dd></div></dl>
+      </section>
+      <footer class="footer"><span>数愈前端设计规范 · 能力频道页</span><a href="./product/workflows.html" target="_blank" rel="noopener">打开完整产品页面 ↗</a></footer>
+    </main>
+  </div>
+  <script>
+    const anchors = [...document.querySelectorAll('.page-spec-anchors a')];
+    const sections = [...document.querySelectorAll('.doc-section[id]')];
+    function updateSection() {
+      let active = sections[0];
+      for (const section of sections) if (section.getBoundingClientRect().top <= 130) active = section;
+      anchors.forEach(link => {
+        const selected = link.hash === '#' + active.id;
+        link.classList.toggle('active', selected);
+        if (selected) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
+      });
+    }
+    window.addEventListener('scroll', updateSection, { passive: true });
+    updateSection();
+  </script>
+</body>
+</html>

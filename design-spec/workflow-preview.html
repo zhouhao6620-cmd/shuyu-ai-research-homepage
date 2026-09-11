@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="数愈能力预览页规范说明与独立产品效果入口">
+  <title>能力预览页 · 数愈设计规范</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./page-spec.css">
+</head>
+<body class="page-spec">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="topbar">
+    <a class="brand" href="./index.html"><img src="../visitor/assets/shuyu-logo.png" alt="数愈科研"><span class="brand-divider"></span><span>前端设计规范</span></a>
+    <nav class="channel-nav" aria-label="设计规范导航"><a href="./index.html">设计规范</a><a href="./skeleton.html">全局骨架</a><a href="./free-chat.html">自由对话</a><a href="./task-chat.html">任务对话</a><a href="./workflows.html">能力频道页</a><a href="./workflow-detail.html">能力详情页</a><a href="./workflow-preview.html" class="active" aria-current="page">能力预览页</a></nav>
+    <div class="version">V1 · 设计规范</div>
+  </header>
+  <div class="docs-shell">
+    <aside class="toc" aria-label="规范目录">
+      <p class="toc-label">能力页面规范</p>
+      <nav class="page-spec-pages" aria-label="能力页面"><a href="./workflows.html">能力频道页</a><a href="./workflow-detail.html">能力详情页</a><a href="./workflow-preview.html" class="is-current" aria-current="page">能力预览页</a></nav>
+      <p class="toc-label page-spec-contents-label">本页内容</p>
+      <nav class="page-spec-anchors" aria-label="本页章节"><a class="active" href="#overview" aria-current="location">规范概览</a><a href="#layout">页面骨架</a><a href="#input">任务对话</a><a href="#steps">过程组织</a><a href="#output">交付与操作</a></nav>
+      <div class="toc-note"><span class="status-dot"></span><div><strong>案例与交付</strong><small>规范说明 · 独立产品页面</small></div></div>
+    </aside>
+    <main id="main" class="content">
+      <section id="overview" class="page-hero doc-section page-spec-hero">
+        <div><p class="eyebrow">CAPABILITY PREVIEW</p><h1>能力预览页</h1><p class="hero-lead">能力预览页是一次真实科研任务对话的只读模拟。页面沿任务发生顺序还原用户输入、思考过程、任务链、工具执行、交付文件和最终回复，让用户在运行前理解能力如何工作。</p></div>
+        <div class="page-spec-launch"><a href="./product/workflow-preview.html" target="_blank" rel="noopener">打开能力预览页 <span aria-hidden="true">↗</span></a><p>800px 对话轨道 · 新窗口查看</p></div>
+      </section>
+      <section id="layout" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">01 / LAYOUT</p><h2>页面布局</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>固定骨架</dt><dd>使用 260px 左侧导航、56px 顶部导航、38px 安全边距和 800px 中央对话轨道。顶部左侧为“退出预览”，中间展示案例标题，右侧保留“分享”。</dd></div><div><dt>侧栏演示规则</dt><dd>“新建自由对话”和“新建科研任务”统一使用白底灰边胶囊按钮。左侧导航不设置页面超链接，避免演示中误跳转；需要展示的任务配置交互可继续使用按钮触发。</dd></div><div><dt>任务轨道</dt><dd>复用已冻结的任务对话轨道，固定放在内容顶部，宽 800px、高 112px。只显示约 6 个宏观阶段、图标、名称和状态，不在轨道内增加标题、步骤日志或解释文字。</dd></div></dl>
+      </section>
+<section id="input" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">02 / CONVERSATION</p><h2>任务对话</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>唯一主结构</dt><dd>任务对话是页面唯一的信息主轴。不得在对话前增加案例介绍区，也不得把执行过程重新包装成详情模块、数据看板或大框套小框的展示页面。</dd></div><div><dt>用户消息</dt><dd>用户输入靠右显示，可包含文件卡片和完整任务要求。文件卡片展示名称、格式与大小；任务文字保持自然口语，模拟真实用户发起任务的状态。</dd></div><div><dt>助手消息</dt><dd>助手内容沿 800px 轨道左侧直接展开，不显示头像。回复字号与任务对话规范一致，消息之间使用留白形成节奏，不给每条回复增加气泡或外框。</dd></div></dl>
+      </section>
+<section id="steps" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">03 / PROCESS</p><h2>过程组织</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>时间顺序</dt><dd>内容依次呈现：用户输入、助手任务确认、思考过程、任务链与工具执行、交付文件、最终回复。案例必须像已经完成的一次真实任务回放。</dd></div><div><dt>思考过程</dt><dd>使用轻量的可展开行，说明判断路径和执行计划。展开内容以淡色左侧竖线组织，不使用独立大卡片，也不泄露无助于用户理解的内部推理细节。</dd></div><div><dt>任务链</dt><dd>使用纵向任务链展示关键执行节点、完成状态、简短动作和阶段结果。详细日志默认收起，可用“查看其他 N 个执行步骤”展开；任务链不重复顶部宏观轨道。</dd></div><div><dt>工具与状态</dt><dd>文件验证、代码执行等工具结果就近放在对应任务节点下，采用轻量灰底单行样式。状态应说明完成、失败或需要处理，避免装饰性编号和统计看板。</dd></div></dl>
+      </section>
+<section id="output" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">04 / DELIVERY</p><h2>交付与操作</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>交付文件</dt><dd>交付物作为助手消息中的文件附件出现，展示文件类型、名称和简短说明，并提供查看入口。文件卡片使用白底灰边和 8px 圆角，不单独建立“案例文件”模块。</dd></div><div><dt>最终回复</dt><dd>以开放的正文结构展示“完成说明、结果概览、关键结论、普通表格、其他问题和总体评价”。不使用数据仪表盘或整块报告外框；表格表头统一为 14px。</dd></div><div><dt>底部动作</dt><dd>页面底部固定单一主按钮“马上运行科研评审工作流 →”，字号 14px，宽约 260px、高 44px，使用胶囊大圆角。按钮下方使用一句辅助说明，解释将使用用户自己的研究材料开始任务。</dd></div><div><dt>内容真实性</dt><dd>案例可以使用真实任务结构与完整交付表达，但必须明确属于案例预览。数据、问题数量和结论应来自对应案例内容，不能用无依据的通用占位信息替代。</dd></div></dl>
+      </section>
+      <footer class="footer"><span>数愈前端设计规范 · 能力预览页</span><a href="./product/workflow-preview.html" target="_blank" rel="noopener">打开完整产品页面 ↗</a></footer>
+    </main>
+  </div>
+  <script>
+    const anchors = [...document.querySelectorAll('.page-spec-anchors a')];
+    const sections = [...document.querySelectorAll('.doc-section[id]')];
+    function updateSection() {
+      let active = sections[0];
+      for (const section of sections) if (section.getBoundingClientRect().top <= 130) active = section;
+      anchors.forEach(link => {
+        const selected = link.hash === '#' + active.id;
+        link.classList.toggle('active', selected);
+        if (selected) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
+      });
+    }
+    window.addEventListener('scroll', updateSection, { passive: true });
+    updateSection();
+  </script>
+</body>
+</html>

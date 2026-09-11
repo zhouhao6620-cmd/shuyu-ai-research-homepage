@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="数愈能力详情页规范说明与独立产品效果入口">
+  <title>能力详情页 · 数愈设计规范</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./page-spec.css">
+</head>
+<body class="page-spec">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="topbar">
+    <a class="brand" href="./index.html"><img src="../visitor/assets/shuyu-logo.png" alt="数愈科研"><span class="brand-divider"></span><span>前端设计规范</span></a>
+    <nav class="channel-nav" aria-label="设计规范导航"><a href="./index.html">设计规范</a><a href="./skeleton.html">全局骨架</a><a href="./free-chat.html">自由对话</a><a href="./task-chat.html">任务对话</a><a href="./workflows.html">能力频道页</a><a href="./workflow-detail.html" class="active" aria-current="page">能力详情页</a><a href="./workflow-preview.html">能力预览页</a></nav>
+    <div class="version">V1 · 设计规范</div>
+  </header>
+  <div class="docs-shell">
+    <aside class="toc" aria-label="规范目录">
+      <p class="toc-label">能力页面规范</p>
+      <nav class="page-spec-pages" aria-label="能力页面"><a href="./workflows.html">能力频道页</a><a href="./workflow-detail.html" class="is-current" aria-current="page">能力详情页</a><a href="./workflow-preview.html">能力预览页</a></nav>
+      <p class="toc-label page-spec-contents-label">本页内容</p>
+      <nav class="page-spec-anchors" aria-label="本页章节"><a class="active" href="#overview" aria-current="location">规范概览</a><a href="#layout">组织层级</a><a href="#anchor">悬浮导航</a><a href="#value">设计价值</a><a href="#process">关键流程</a><a href="#input">输入与推荐</a></nav>
+      <div class="toc-note"><span class="status-dot"></span><div><strong>理解与启动</strong><small>规范说明 · 独立产品页面</small></div></div>
+    </aside>
+    <main id="main" class="content">
+      <section id="overview" class="page-hero doc-section page-spec-hero">
+        <div><p class="eyebrow">CAPABILITY DETAIL</p><h1>能力详情页</h1><p class="hero-lead">帮助用户判断工作流是否适合自己的研究任务。先说明能力价值，再展开方法、输入要求和交付内容。</p></div>
+        <div class="page-spec-launch"><a href="./product/workflow-detail.html" target="_blank" rel="noopener">打开能力详情页 <span aria-hidden="true">↗</span></a><p>960px 内容轨道 · 新窗口查看</p></div>
+      </section>
+      <section id="layout" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">01 / HIERARCHY</p><h2>组织层级</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>固定骨架</dt><dd>能力详情页使用 960px 最大内容轨道，沿用 260px 左侧导航、56px 顶部导航和 38px 安全边距；不设置右侧推荐助手。顶部返回入口统一为“箭头＋返回”。</dd></div><div><dt>能力名片</dt><dd>开放式头部依次展示能力名称、一级分类与二级分类、价值描述、能力标签、更新时间、维护团队、收藏及“运行工作流／查看案例”两个按钮。分类说明归属，标签说明能力特征，两者不得混为同一层级。</dd></div><div><dt>正文顺序</dt><dd>一级模块固定为“设计价值、关键流程、输入配置、相关推荐”，名称同时作为悬浮导航名称。正文全部展开，不使用二级 Tab、折叠面板或重复导航。</dd></div><div><dt>层级规则</dt><dd>一级标题负责切换用户问题，二级标题负责组织该模块内的信息类型，表格表头和标签只承担字段说明。通过标题、留白、语义色和少量分隔建立层次，避免大框套小框、连续描边和无意义装饰。</dd></div></dl>
+      </section>
+<section id="anchor" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">02 / ANCHOR</p><h2>悬浮导航</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>导航名称</dt><dd>导航只使用四个一级模块名称：设计价值、关键流程、输入配置、相关推荐。默认文字为中性灰，当前章节使用品牌蓝文字与 2px 下划线。</dd></div><div><dt>吸顶行为</dt><dd>导航随页面滚动吸附在顶部导航下方。吸顶后白色背景覆盖整个右侧工作区，内容仍沿 960px 轨道对齐，并增加浅灰底边与淡投影；普通状态不显示投影。</dd></div><div><dt>操作跟随</dt><dd>头部能力名片离开视口后，“运行工作流”和“查看案例”自动出现在悬浮导航最右侧；滚回头部后收起。点击锚点时为目标标题预留吸顶高度，避免内容被遮挡。</dd></div></dl>
+      </section>
+<section id="value" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">03 / VALUE</p><h2>设计价值</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>先说用户处境</dt><dd>开头用一句话回答“这个工作流适合什么任务”。随后列出适用场景、评审或处理范围，让用户先判断相关性，再阅读方法细节。</dd></div><div><dt>问题与价值</dt><dd>分别使用两个独立、横向并列的表格。左侧用红色语义标题描述用户可能遇到的问题，右侧用绿色语义标题说明工作流如何帮助；两侧行数、信息密度和描述长度应大致均衡，不增加 01、02 等装饰编号。</dd></div><div><dt>表达要求</dt><dd>问题要描述真实阻碍及其影响，价值要说明系统采取的动作、保留的依据和用户获得的判断支持。避免只写功能名、营销口号或无法验证的效果承诺。</dd></div></dl>
+      </section>
+<section id="process" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">04 / PROCESS</p><h2>关键流程</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>流程叙述</dt><dd>以 4–6 个关键节点说明从读取输入到形成结果的主路径。每个节点包含动作名称和一句成果说明，使用动词开头，明确该步处理什么以及产生什么中间结果。</dd></div><div><dt>人工确认</dt><dd>流程下方用表格对应“关键节点、系统检查、需要用户确认”。系统检查写清自动处理范围，用户确认写清专业判断、边界选择和最终决策，避免让自动化表达替代医学责任。</dd></div><div><dt>交付成果</dt><dd>按交付物组织内容，每张卡片说明名称、格式、包含内容和使用方式。主要交付与可选补充成果分开表达；补充成果使用轻量语义色卡片，避免在外层再包一层大容器。</dd></div></dl>
+      </section>
+<section id="input" class="doc-section">
+        <header class="section-heading"><div><p class="section-index">05 / INPUT</p><h2>输入配置与相关推荐</h2></div></header>
+        <dl class="page-spec-rules"><div><dt>输入配置</dt><dd>先用并列卡片说明每类输入的名称、状态和具体内容，再用表格列出材料、要求、示例与准备说明。状态标签使用带边框的矩形语义标签；“输入内容”位于灰色内容区外，具体说明放在灰色背景内。</dd></div><div><dt>运行偏好</dt><dd>模型、调用模式、输出语言和输出风格使用语义色区分当前推荐项；未选中项统一使用灰色背景和灰色边框。所有表格表头字号为 14px。</dd></div><div><dt>同行案例</dt><dd>案例不作为一级模块，放在输入配置下方。案例卡片只说明输入主题、采用配置和得到的交付物，并提供“查看完整案例”入口跳转到能力案例页。</dd></div><div><dt>相关推荐</dt><dd>使用与能力频道一致的丰富能力大卡片，展示分类、名称、两行价值描述、能力标签和详情入口。每行三张，标签样式与频道页统一。</dd></div></dl>
+      </section>
+      <footer class="footer"><span>数愈前端设计规范 · 能力详情页</span><a href="./product/workflow-detail.html" target="_blank" rel="noopener">打开完整产品页面 ↗</a></footer>
+    </main>
+  </div>
+  <script>
+    const anchors = [...document.querySelectorAll('.page-spec-anchors a')];
+    const sections = [...document.querySelectorAll('.doc-section[id]')];
+    function updateSection() {
+      let active = sections[0];
+      for (const section of sections) if (section.getBoundingClientRect().top <= 130) active = section;
+      anchors.forEach(link => {
+        const selected = link.hash === '#' + active.id;
+        link.classList.toggle('active', selected);
+        if (selected) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
+      });
+    }
+    window.addEventListener('scroll', updateSection, { passive: true });
+    updateSection();
+  </script>
+</body>
+</html>

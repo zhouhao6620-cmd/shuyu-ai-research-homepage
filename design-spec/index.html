@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="数愈 AI 科研平台前端设计规范" />
+    <title>数愈前端设计规范</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <header class="topbar">
+      <a class="brand" href="#overview" aria-label="数愈前端设计规范首页">
+        <img src="../visitor/assets/shuyu-logo.png" alt="数愈科研" />
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span>前端设计规范</span>
+      </a>
+      <nav class="channel-nav" aria-label="规范频道">
+        <a class="active" href="./index.html">设计规范</a>
+        <a href="./skeleton.html">全局骨架</a>
+        <a href="./free-chat.html">自由对话</a>
+        <a href="./task-chat.html">任务对话</a>
+        <a href="./workflows.html">能力频道页</a>
+        <a href="./workflow-detail.html">能力详情页</a>
+      </nav>
+      <div class="version">V1 · 已冻结</div>
+    </header>
+
+    <div class="docs-shell">
+      <aside class="toc" aria-label="本页目录">
+        <p class="toc-label">设计规范</p>
+        <nav>
+          <a class="active" href="#overview">设计原则</a>
+          <a href="#colors">色彩</a>
+          <a href="#typography">字体</a>
+          <a href="#spacing">间距与圆角</a>
+          <a href="#layers">层级与容器</a>
+          <a href="#navigation">导航 &amp; 频道切换</a>
+          <a href="#filters">筛选</a>
+          <a href="#icons">图标</a>
+          <a href="#buttons">按钮</a>
+        </nav>
+        <div class="toc-note">
+          <span class="status-dot"></span>
+          <div><strong>已冻结规则</strong><small>基于 Ant Design X</small></div>
+        </div>
+      </aside>
+
+      <main id="main" class="content">
+        <section id="overview" class="hero doc-section" data-title="设计原则">
+          <div class="eyebrow">SHUYU DESIGN SYSTEM</div>
+          <h1>为可信科研，建立清楚的界面秩序</h1>
+          <p class="hero-lead">数愈采用开放式、内容驱动的极简设计。通过排版、留白和清晰状态组织复杂科研过程，只在独立对象需要强调时使用卡片。</p>
+          <div class="principle-row" aria-label="核心设计原则">
+            <div><span>01</span><strong>内容先于容器</strong><p>先组织阅读顺序，再决定是否需要边框。</p></div>
+            <div><span>02</span><strong>过程真实可见</strong><p>每个状态都对应真实执行记录与证据。</p></div>
+            <div><span>03</span><strong>强调保持克制</strong><p>一种内容只使用一种主要强调方式。</p></div>
+          </div>
+        </section>
+
+        <section id="colors" class="doc-section" data-title="色彩">
+          <header class="section-heading">
+            <div><p class="section-index">01 / COLOR</p><h2>色彩</h2><p>中性工作台承载内容，蓝色表达核心交互，亮橙色只用于需要关注的过程状态。</p></div>
+            <button class="copy-css" data-copy="colors" type="button">复制 CSS 样式</button>
+          </header>
+          <div class="color-groups">
+            <article class="sample-block">
+              <h3>基础表面</h3>
+              <div class="swatch-row">
+                <div class="swatch"><span style="--swatch:#F7F8FA"></span><strong>基础背景</strong><code>#F7F8FA</code></div>
+                <div class="swatch"><span style="--swatch:#FFFFFF"></span><strong>内容表面</strong><code>#FFFFFF</code></div>
+                <div class="swatch"><span style="--swatch:#F2F4F7"></span><strong>弱化背景</strong><code>#F2F4F7</code></div>
+                <div class="swatch"><span style="--swatch:#ECEFF3"></span><strong>悬停背景</strong><code>#ECEFF3</code></div>
+              </div>
+            </article>
+            <article class="sample-block">
+              <h3>文字与边界</h3>
+              <div class="swatch-row">
+                <div class="swatch"><span style="--swatch:#000000"></span><strong>主要文字</strong><code>#000000</code></div>
+                <div class="swatch"><span style="--swatch:#666666"></span><strong>次要文字</strong><code>#666666</code></div>
+                <div class="swatch"><span style="--swatch:#999999"></span><strong>辅助文字</strong><code>#999999</code></div>
+                <div class="swatch"><span style="--swatch:#E2E5E9"></span><strong>边框</strong><code>#E2E5E9</code></div>
+              </div>
+            </article>
+            <article class="sample-block">
+              <h3>品牌与状态</h3>
+              <div class="swatch-row">
+                <div class="swatch"><span style="--swatch:#3478F6"></span><strong>品牌蓝</strong><code>#3478F6</code></div>
+                <div class="swatch"><span style="--swatch:#FA8C16"></span><strong>执行橙</strong><code>#FA8C16</code></div>
+                <div class="swatch"><span style="--swatch:#238636"></span><strong>完成绿</strong><code>#238636</code></div>
+                <div class="swatch"><span style="--swatch:#C93732"></span><strong>错误红</strong><code>#C93732</code></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="typography" class="doc-section" data-title="字体">
+          <header class="section-heading">
+            <div><p class="section-index">02 / TYPOGRAPHY</p><h2>字体</h2><p>使用系统无衬线字体，以有限的字号与字重建立稳定、适合长时间阅读的科研界面。</p></div>
+            <button class="copy-css" data-copy="typography" type="button">复制 CSS 样式</button>
+          </header>
+          <div class="type-specimens">
+            <div class="type-row hero-type"><span>Hero</span><p>从问题走向可信的科研成果</p><code>40 / 52 · 600</code></div>
+            <div class="type-row title-type"><span>页面标题</span><p>临床预测模型构建</p><code>20 / 28 · 600</code></div>
+            <div class="type-row section-type"><span>章节标题</span><p>研究设计与数据准备</p><code>18 / 26 · 600</code></div>
+            <div class="type-row body-type"><span>阅读正文</span><p>所有结论都应关联到可核验的输入、方法与阶段性证据。</p><code>16 / 26 · 400</code></div>
+            <div class="type-row ui-body-type"><span>界面正文</span><p>用于导航、表单、按钮说明与其他紧凑界面信息。</p><code>14 / 22 · 400</code></div>
+            <div class="type-row meta-type"><span>辅助信息</span><p>更新于 2026-09-09 · 数愈科研维护</p><code>12 / 18 · 400</code></div>
+          </div>
+        </section>
+
+        <section id="spacing" class="doc-section" data-title="间距与圆角">
+          <header class="section-heading">
+            <div><p class="section-index">03 / GEOMETRY</p><h2>间距与圆角</h2><p>统一的节奏比更多装饰更能建立层级。页面章节保持呼吸，控件圆角按对象尺度递进。</p></div>
+            <button class="copy-css" data-copy="geometry" type="button">复制 CSS 样式</button>
+          </header>
+          <div class="geometry-grid">
+            <article class="sample-block spacing-demo">
+              <h3>间距标尺</h3>
+              <div class="ruler"><span>4</span><i style="--w:4px"></i></div>
+              <div class="ruler"><span>8</span><i style="--w:8px"></i></div>
+              <div class="ruler"><span>12</span><i style="--w:12px"></i></div>
+              <div class="ruler"><span>16</span><i style="--w:16px"></i></div>
+              <div class="ruler"><span>24</span><i style="--w:24px"></i></div>
+              <div class="ruler"><span>32</span><i style="--w:32px"></i></div>
+              <div class="ruler"><span>48</span><i style="--w:48px"></i></div>
+              <div class="ruler"><span>64</span><i style="--w:64px"></i></div>
+            </article>
+            <article class="sample-block radius-demo">
+              <h3>圆角层级</h3>
+              <div class="radius-list">
+                <div><i style="--r:6px"></i><span>6px<small>标签 / 筛选 / 紧凑控件</small></span></div>
+                <div><i style="--r:8px"></i><span>8px<small>独立卡片 / 大容器</small></span></div>
+                <div><i style="--r:16px"></i><span>16px<small>对话大输入框</small></span></div>
+                <div><i class="radius-circle"></i><span>圆形 / 胶囊<small>行动按钮 / 头像 / 状态</small></span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="layers" class="doc-section" data-title="层级与容器">
+          <header class="section-heading">
+            <div><p class="section-index">04 / LAYOUT</p><h2>层级与容器</h2><p>开放式布局允许使用卡片和边框，但同一语义层级只建立一次容器边界，避免卡片套卡片。</p></div>
+            <button class="copy-css" data-copy="layers" type="button">复制 CSS 样式</button>
+          </header>
+          <div class="real-cases">
+            <article class="real-case">
+              <header class="case-heading"><div><span>真实案例 01</span><h3>痛点与价值：重复信息组</h3></div><p>去掉章节外框、条目卡片和内容色块的三层嵌套。章节保持开放，每个问题使用一行，两列内容依靠排版对齐。</p></header>
+              <div class="case-example-label bad"><span></span>错误示例</div>
+              <div class="bad-pain-value">
+                <h4>痛点与价值</h4>
+                <div><strong>读了很多文献，但创新点不清楚</strong><section><p><b>常见痛点</b>摘要堆叠，创新点难以提炼。</p><p><b>工作流价值</b>识别限制并生成创新点。</p></section></div>
+                <div><strong>想法容易脱离证据</strong><section><p><b>常见痛点</b>无法说明研究空白来源。</p><p><b>工作流价值</b>保留真实引用依据。</p></section></div>
+              </div>
+              <div class="case-example-label good"><span></span>推荐示例</div>
+              <div class="mapping-table-wrap">
+                <table class="mapping-table">
+                  <thead><tr><th>研究问题</th><th class="pain-head">研究痛点</th><th class="value-head">工作流价值</th></tr></thead>
+                  <tbody>
+                    <tr><th>读了很多文献，但创新点不清楚</th><td class="pain-cell">人工阅读常形成摘要堆叠，难以识别共同暴露的问题和可利用的空白。</td><td class="value-cell">识别共同限制与未探索组合，再生成有文献支持的创新点。</td></tr>
+                    <tr><th>想法容易脱离证据</th><td class="pain-cell">直接凭经验生成的方向，往往无法说明研究空白来自哪里。</td><td class="value-cell">要求创新点建立在真实论文材料上，并保留引用依据。</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="case-rule"><strong>规则：</strong>存在明确横向映射关系时直接使用表格；表头、网格和轻量语义色共同强化对应关系。</p>
+            </article>
+
+            <article class="real-case">
+              <header class="case-heading"><div><span>真实案例 02</span><h3>输入与交付：并列功能区</h3></div><p>输入和结果是两个可独立操作的对象，可以各使用一层区域边界。区域内部只保留必要的表单边框、上传占位和列表分隔。</p></header>
+              <div class="case-example-label bad"><span></span>错误示例</div>
+              <div class="bad-input-output">
+                <section><h4>输入字段</h4><div><label>具体领域</label><p>宫颈癌肝转移预后</p></div><div><label>临床现象</label><p>已经发生肝转移后还能活多久？</p></div></section>
+                <section><h4>结果文件</h4><div class="bad-upload">暂无上传文件</div><div class="bad-file">▧ best_idea_deep_dive.md</div><div class="bad-file">▧ research_proposal.md</div></section>
+              </div>
+              <div class="case-example-label good"><span></span>推荐示例</div>
+              <div class="input-output-demo">
+                <section class="functional-pane">
+                  <h4>输入字段</h4>
+                  <label>具体领域<input value="宫颈癌肝转移预后" readonly></label>
+                  <label>临床现象、需求或困惑<textarea readonly>已经发生肝转移后还能活多久？哪些患者更容易发展成肝转移？</textarea></label>
+                  <div class="config-line"><span class="mode-tag">深度模式</span><span class="language-tag">中文输出</span><span class="style-tag">正式</span></div>
+                </section>
+                <section class="functional-pane">
+                  <h4>交付文件 <button type="button">全部下载</button></h4>
+                  <div class="upload-empty">暂无上传文件</div>
+                  <div class="file-list">
+                    <div><p><strong>best_idea_deep_dive.md</strong><small>研究方向深度分析</small></p><button type="button" aria-label="下载">↓</button></div>
+                    <div><p><strong>research_proposal.md</strong><small>完整研究方案</small></p><button type="button" aria-label="下载">↓</button></div>
+                    <div><p><strong>timeline.md</strong><small>研究推进计划</small></p><button type="button" aria-label="下载">↓</button></div>
+                  </div>
+                </section>
+              </div>
+              <p class="case-rule"><strong>规则：</strong>并列内容使用开放双栏和一条分隔线；灰色虚线表示等待上传，浅绿色背景与边框表示已经完成、可以交付。</p>
+            </article>
+          </div>
+          <div class="boundary-rules">
+            <p><strong>可以使用</strong><span>独立卡片、表格边框、输入框、上传虚线框、区域分隔线。</span></p>
+            <p><strong>组织方式</strong><span>页面保持开放；同级卡片并列或顺序排列，每张卡片只承载一个独立对象。</span></p>
+            <p><strong>禁止方式</strong><span>大卡片内再放同类小卡片，小卡片内部继续添加色块和边框。</span></p>
+          </div>
+          <blockquote>边框负责说明“这里是一个对象”，不是负责装饰每一层内容。先确定语义层级，再为该层级建立一次清晰边界。</blockquote>
+        </section>
+
+        <section id="navigation" class="doc-section" data-title="导航 &amp; 频道切换">
+          <header class="section-heading">
+            <div><p class="section-index">05 / NAVIGATION</p><h2>导航 &amp; 频道切换</h2><p>本章节包含两个独立模块：锚点导航用于定位页面章节，频道切换用于切换自由对话与科研任务模式。</p></div>
+            <button class="copy-css" data-copy="navigation" type="button">复制 CSS 样式</button>
+          </header>
+          <article class="navigation-module">
+            <h3>锚点导航</h3><p>随页面滚动吸附在内容顶部，点击定位到当前详情页章节。</p>
+            <div class="anchor-navigation-demo"><a class="active" href="#navigation" aria-current="true">工作流介绍</a><a href="#navigation">适用场景</a><a href="#navigation">执行流程</a><a href="#navigation">输入与交付</a><a href="#navigation">常见问题</a></div>
+            <div class="style-description"><h3>样式说明</h3><dl><div><dt>容器</dt><dd>高度 64px，白色背景，仅保留底部 #E2E5E9 分隔线，吸附在内容顶部</dd></div><div><dt>默认状态</dt><dd>#666 文字、400 字重，不使用按钮背景、边框或图标</dd></div><div><dt>选中状态</dt><dd>品牌蓝文字、500 字重，底部显示 2px 同色指示线</dd></div><div><dt>布局与行为</dt><dd>导航项高 48px、间距 28px；点击定位或模拟切换当前章节</dd></div></dl></div>
+          </article>
+          <article class="navigation-module">
+            <h3>频道切换</h3><p>独立的模式切换控件，用于在自由对话与科研任务之间切换。</p>
+            <div class="channel-switch-demo"><div class="channel-switch" role="tablist" aria-label="对话模式"><a class="active" href="#" role="tab" aria-selected="true"><svg class="channel-chat-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h12a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H9l-4.5 3v-3.5A3 3 0 0 1 2 13V8.5a3 3 0 0 1 2-3Z"/><path d="M19 9.5h1a2 2 0 0 1 2 2V16a2 2 0 0 1-2 2h-1v2l-3-2"/></svg>自由对话</a><a href="#" role="tab" aria-selected="false"><svg class="research-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v5.2l-4.7 8.1A3.1 3.1 0 0 0 8 21h8a3.1 3.1 0 0 0 2.7-4.7L14 8.2V3M8.2 14h7.6M9.5 17.2h5"/></svg>科研任务</a></div></div>
+            <div class="style-description"><h3>样式说明</h3><dl><div><dt>默认轨道</dt><dd>总宽 292px、高度 48px，白色背景、#E2E5E9 边框和胶囊圆角</dd></div><div><dt>默认选项</dt><dd>两个选项各宽 146px、高 48px；图标 20px，图文间距 8px，文字 14px / 22px</dd></div><div><dt>选中状态</dt><dd>高度提升至 52px，上下浮出 2px；#E3EDFF 背景、品牌蓝边框与图文，并增加蓝色轻阴影</dd></div><div><dt>行为</dt><dd>两个模式互斥，切换后保留各自最近一次会话状态</dd></div></dl></div>
+          </article>
+        </section>
+
+        <section id="filters" class="doc-section" data-title="筛选">
+          <header class="section-heading">
+            <div><p class="section-index">06 / FILTER</p><h2>筛选</h2><p>筛选用于缩小内容范围。按字段分组、横向排列，默认保持轻量；只有已选条件使用品牌蓝强调。</p></div>
+            <button class="copy-css" data-copy="filters" type="button">复制 CSS 样式</button>
+          </header>
+          <div class="filter-specimen">
+            <div class="primary-filter"><span>一级分类</span><div><button>全部（96）</button><button class="active">医学研究（38）</button><button>数据分析（26）</button><button>科研写作（18）</button><button>学术传播（14）</button></div></div>
+            <div class="secondary-filter"><span>二级标签</span><div><button class="active">文献检索与循证研究（8）</button><button>科研选题与方案设计（16）</button><button>系统综述与 Meta 分析（14）</button><button>医学 AI 与智能建模（8）</button><button>科研评审与质量评价（7）</button></div></div>
+          </div>
+          <div class="style-description"><h3>样式说明</h3><dl><div><dt>一级分类</dt><dd>横向文字导航，高度 44px；选中项使用品牌蓝文字和 2px 底线</dd></div><div><dt>二级标签</dt><dd>高度 36px，左右内边距 12px，圆角 6px；空间不足时自然换行</dd></div><div><dt>数量</dt><dd>所有一级分类和二级标签均使用“名称（XX）”格式，不单独设置计数徽标</dd></div><div><dt>选中状态</dt><dd>白色背景、品牌蓝边框与文字；悬停使用 #F7F8FA，默认保持灰色边框</dd></div></dl></div>
+        </section>
+
+        <section id="icons" class="doc-section" data-title="图标">
+          <header class="section-heading">
+            <div><p class="section-index">07 / ICONOGRAPHY</p><h2>图标</h2><p>默认使用 Ant Design Icons 的线性风格。图标服务于识别与状态，不作为装饰。</p></div>
+            <button class="copy-css" data-copy="icons" type="button">复制 CSS 样式</button>
+          </header>
+          <div class="icon-scenarios">
+            <article class="sample-block"><h3>导航项</h3><div class="nav-demo"><span class="nav-demo-item active"><span class="icon chat"></span>自由对话</span><span class="nav-demo-item"><svg class="research-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v5.2l-4.7 8.1A3.1 3.1 0 0 0 8 21h8a3.1 3.1 0 0 0 2.7-4.7L14 8.2V3M8.2 14h7.6M9.5 17.2h5"/></svg>科研任务</span></div><small>20px 图标 · 10px 间距 · 文字说明目的地</small></article>
+            <article class="sample-block"><h3>图标文字操作</h3><button class="icon-text-action" type="button"><svg class="share-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M5 13v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/></svg>分享</button><small>轻量操作不使用背景与边框</small></article>
+            <article class="sample-block"><h3>纯图标按钮</h3><button class="icon-only send" type="button" aria-label="发送" title="发送"><span class="send-icon"></span></button><small>发送使用蓝色圆形按钮，并提供 Tooltip</small></article>
+            <article class="sample-block"><h3>文字操作</h3><a class="text-action" href="#">查看详情 →</a><small>语义已经清楚时不强制添加图标</small></article>
+            <article class="sample-block"><h3>能力卡片</h3><div class="capability-mini"><span class="icon-box"><span class="icon nodes"></span></span><div><strong>预测模型构建</strong><p>训练、验证并解释模型</p></div></div><small>24px 图标 · 40px 容器</small></article>
+            <article class="sample-block"><h3>任务状态</h3><div class="status-list"><span><i class="state running"></i>执行中</span><span><i class="state complete"></i>已完成</span><span><i class="state error"></i>异常</span></div><small>8px 状态点 + 文字，仅表达当前状态</small></article>
+          </div>
+          <blockquote>导航和关键操作默认使用“图标 + 文字”。只有含义高度通用、空间受限的辅助操作才使用纯图标；普通文字链接无需为了装饰附加图标。</blockquote>
+        </section>
+
+        <section id="buttons" class="doc-section" data-title="按钮">
+          <header class="section-heading">
+            <div><p class="section-index">08 / BUTTONS</p><h2>按钮</h2><p>一个操作区域只保留一个主按钮。按钮文案使用动词和对象，加载时保持原有宽度。</p></div>
+            <button class="copy-css" data-copy="buttons" type="button">复制 CSS 样式</button>
+          </header>
+          <div class="button-showcase sample-block">
+            <div><span class="sample-label">主要操作</span><button class="btn primary">运行工作流</button></div>
+            <div><span class="sample-label">强调次要操作</span><button class="btn primary-outline">新建自由对话</button></div>
+            <div><span class="sample-label">次要操作</span><button class="btn secondary">查看案例</button></div>
+            <div><span class="sample-label">弱化操作</span><button class="btn tonal">保存草稿</button></div>
+            <div><span class="sample-label">文字操作</span><button class="btn text">查看详情 →</button></div>
+            <div><span class="sample-label">危险操作</span><button class="btn danger">结束任务</button></div>
+          </div>
+          <div class="creation-actions">
+            <div><span>自由对话入口</span><button class="creation secondary"><span class="icon plus"></span>新建自由对话</button></div>
+            <div><span>科研任务入口</span><button class="creation secondary"><svg class="research-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v5.2l-4.7 8.1A3.1 3.1 0 0 0 8 21h8a3.1 3.1 0 0 0 2.7-4.7L14 8.2V3M8.2 14h7.6M9.5 17.2h5"/></svg>新建科研任务</button></div>
+          </div>
+        </section>
+
+        <footer class="footer"><span>数愈前端设计规范 · V0</span><span>基于已冻结设计决策</span></footer>
+      </main>
+    </div>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
